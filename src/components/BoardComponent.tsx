@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useCallback, useEffect, useState} from 'react';
 import {Board} from "../models/Board";
 import CellComponent from "./CellComponent";
 import {Cell} from "../models/Cell";
@@ -11,8 +11,22 @@ interface BoardProps {
 const BoardComponent: FC<BoardProps> = ({board, setBoard}) => {
     const [selectedCell, setSelectedCell] = useState<Cell | null>(null)
     const selectCell = (cell: Cell) => {
-        setSelectedCell(cell)
+        if (cell.figure) setSelectedCell(cell)
     }
+    const updateBoard = useCallback(() => {
+        const newBoard = board.getCopyBoard()
+        setBoard(newBoard)
+    }, [board, setBoard])
+    const hightLightCells = useCallback(() => {
+        board.hightLightCells(selectedCell)
+        updateBoard()
+    }, [board, selectedCell, updateBoard])
+
+
+    useEffect(() => {
+        hightLightCells()
+    }, [selectedCell, hightLightCells])
+
     return (
         <div className={'board'}>
             {board.cells.map((row, i) =>

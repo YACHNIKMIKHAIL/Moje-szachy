@@ -9,12 +9,13 @@ function App() {
 
     useEffect(() => {
         restart()
-    },[])
+    }, [])
 
 
     const restart = () => {
         const newBoard = new Board()
         newBoard.initCells()
+        newBoard.addFigures()
         setBoard(newBoard)
     }
     return (

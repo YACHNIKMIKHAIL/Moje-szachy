@@ -10,4 +10,9 @@ constructor(color: Colors, cell: Cell) {
         this.logo = color === Colors.BLACK ? blackLogo : whiteLogo
         this.name = FigureNames.PAWN
     }
+
+    canMove(target: Cell): boolean {
+        return super.canMove(target);
+
+    }
 }

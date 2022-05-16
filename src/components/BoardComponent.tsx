@@ -10,8 +10,15 @@ interface BoardProps {
 
 const BoardComponent: FC<BoardProps> = ({board, setBoard}) => {
     const [selectedCell, setSelectedCell] = useState<Cell | null>(null)
+
     const selectCell = (cell: Cell) => {
-        if (cell.figure) setSelectedCell(cell)
+        if (selectedCell && selectedCell !== cell && selectedCell.figure?.canMove(cell)) {
+            selectedCell.moveFigure(cell)
+            setSelectedCell(null)
+            updateBoard()
+        } else {
+            setSelectedCell(cell)
+        }
     }
     const updateBoard = useCallback(() => {
         const newBoard = board.getCopyBoard()

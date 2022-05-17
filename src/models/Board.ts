@@ -6,9 +6,12 @@ import {Bishop} from "./figures/Bishop";
 import {King} from "./figures/King";
 import {Rook} from "./figures/Rook";
 import {Knight} from "./figures/Knight";
+import {Figure} from "./figures/Figure";
 
 export class Board {
     cells: Cell[][] = []
+    lostBlackFigures: Figure[] = []
+    lostWhiteFigures: Figure[] = []
 
     public initCells() {
         for (let i = 0; i < 8; i++) {

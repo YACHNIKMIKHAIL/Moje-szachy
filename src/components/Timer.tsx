@@ -7,7 +7,7 @@ interface TimerProps {
     restart: () => void;
 }
 
-const Timer: FC<TimerProps> = ({currentPlayer, restart}) => {
+const   Timer: FC<TimerProps> = ({currentPlayer, restart}) => {
     const [blackTime, setBlackTime] = useState(300)
     const [whiteTime, setWhiteTime] = useState(300);
     const timer = useRef<null | ReturnType<typeof setInterval>>(null)

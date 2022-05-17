@@ -30,20 +30,20 @@
     position: relative;
 }
 .czarny {
-    background-color: deepskyblue;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .biały {
-    background-color: #eed4ac;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .selected {
-    background-color: brown;
+    background-color: rgb(255, 17, 17);
 }
 .available {
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    background-color: #22c022;
+    background-color: rgb(255, 17, 17);
 }
 
 .lost {

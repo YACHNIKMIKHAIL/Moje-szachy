@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Szachy/static/css/main.bde42532.css",
+    "main.js": "/Szachy/static/js/main.997f0636.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Szachy/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/Szachy/index.html",
+    "main.bde42532.css.map": "/Szachy/static/css/main.bde42532.css.map",
+    "main.997f0636.js.map": "/Szachy/static/js/main.997f0636.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Szachy/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bde42532.css",
+    "static/js/main.997f0636.js"
+  ]
+}

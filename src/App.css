@@ -4,7 +4,7 @@
 }
 
 .app {
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,7 +17,6 @@
     display: flex;
     flex-wrap: wrap;
 }
-
 .cell {
     width: 64px;
     height: 64px;
@@ -25,35 +24,31 @@
     justify-content: center;
     align-items: center;
 }
-
 .cell img {
     width: 48px;
     height: 48px;
     position: relative;
 }
-
-.black {
-    background-color: rgba(255, 0, 221, 0.85);
+.czarny {
+    background-color: deepskyblue;
 }
-
-.white {
-    background-color: rgb(0, 225, 255);
+.biały {
+    background-color: #eed4ac;
 }
 
 .selected {
-    background-color: yellow;
+    background-color: brown;
 }
-
 .available {
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    background-color: yellow;
+    background-color: #22c022;
 }
 
 .lost {
     height: calc(50vh - 60px);
     padding: 30px;
     margin-left: 50px;
-    background-color: mediumvioletred;
+    background-color: lightgray;
 }

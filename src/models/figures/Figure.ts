@@ -1,44 +1,41 @@
+import logo from '../../assets/black-king.png'
 import {Colors} from "../Colors";
-import logo from './../../assets/black-bishop.png'
 import {Cell} from "../Cell";
 
 export enum FigureNames {
-    FIGURE = '',
-    KING = 'KING',
-    KNIGHT = 'KNIGHT', //vsad
-    PAWN = 'PAWN', //pesh
-    QUEEN = 'QUEEN',
-    ROOK = 'ROOK', //la
-    BISHOP = 'BISHOP' //elef
+    FIGURE = "",
+    KING = "Król",
+    KNIGHT = "Skoczek",
+    PAWN = "Pion",
+    QUEEN = "Hetman",
+    ROOK = "Wieża",
+    BISHOP = "Goniec",
 }
 
 export class Figure {
-    color: Colors
-    logo: typeof logo | null
-    cell: Cell
-    name: FigureNames
-    id: number
+    color: Colors;
+    logo: typeof logo | null;
+    cell: Cell;
+    name: FigureNames;
+    id: number;
+
 
     constructor(color: Colors, cell: Cell) {
-        this.color = color
-        this.cell = cell
-        this.cell.figure = this
-        this.logo = null
+        this.color = color;
+        this.cell = cell;
+        this.cell.figure = this;
+        this.logo = null;
         this.name = FigureNames.FIGURE
         this.id = Math.random()
     }
 
-    canMove(target: Cell): boolean {
-        if (target.figure?.color === this.color) {
+    canMove(target: Cell) : boolean {
+        if(target.figure?.color === this.color)
             return false
-        }
-        if (target.figure?.name === FigureNames.KING) {
+        if(target.figure?.name === FigureNames.KING)
             return false
-        }
-        return true
+        return true;
     }
 
-    moveFigure(target: Cell) {
-
-    }
+    moveFigure(target: Cell) {}
 }

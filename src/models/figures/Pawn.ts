@@ -14,7 +14,6 @@ export class Pawn extends Figure {
     }
 
     canMove(target: Cell): boolean {
-        debugger
         if(!super.canMove(target))
             return false;
         const direction = this.cell.figure?.color === Colors.BLACK ? 1 : -1

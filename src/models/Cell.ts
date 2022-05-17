@@ -21,8 +21,15 @@ export class Cell {
         this.id = Math.random()
     }
 
-    isEmpty() {
+    isEmpty(): boolean {
         return this.figure === null
+    }
+
+    isEnemy(target: Cell): boolean {
+        if (target.figure) {
+            return this.figure?.color !== target.figure.color
+        }
+        return false
     }
 
     isEmptyVertical(target: Cell): boolean {
@@ -64,7 +71,7 @@ export class Cell {
         const dx = this.x < target.x ? 1 : -1
 
         for (let i = 1; i < absY; i++) {
-            if (!this.board.getCell(this.x + dx * i, this.y + dy * i)) {
+            if (!this.board.getCell(this.x + dx * i, this.y + dy * i).isEmpty()) {
                 return false
             }
         }

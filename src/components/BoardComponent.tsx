@@ -45,17 +45,24 @@ const BoardComponent: FC<BoardProps> = ({board, setBoard, currentPlayer, swapPla
         <div>
             <h3>Szachista: {currentPlayer?.color}</h3>
             <div className="board">
-                {board.cells.map((row, index) =>
-                    <React.Fragment key={index}>
-                        {row.map(cell =>
-                            <CellComponent
-                                click={click}
-                                cell={cell}
-                                key={cell.id}
-                                selected={cell.x === selectedCell?.x && cell.y === selectedCell?.y}
-                            />
-                        )}
-                    </React.Fragment>
+                {board.cells.map((row, index) => {
+                        console.log('first map')
+                        return < React.Fragment
+                            key={index}>
+                            {
+                                row.map(cell => {
+                                        console.log('second map')
+                                        return <CellComponent
+                                            click={click}
+                                            cell={cell}
+                                            key={cell.id}
+                                            selected={cell.x === selectedCell?.x && cell.y === selectedCell?.y}
+                                        />
+                                    }
+                                )
+                            }
+                        </React.Fragment>
+                    }
                 )}
             </div>
         </div>

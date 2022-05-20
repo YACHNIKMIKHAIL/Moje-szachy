@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Moje-szachy/static/css/main.bde42532.css",
-    "main.js": "/Moje-szachy/static/js/main.28af6006.js",
+    "main.js": "/Moje-szachy/static/js/main.32053766.js",
     "static/js/787.28cb0dcd.chunk.js": "/Moje-szachy/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/Moje-szachy/index.html",
     "main.bde42532.css.map": "/Moje-szachy/static/css/main.bde42532.css.map",
-    "main.28af6006.js.map": "/Moje-szachy/static/js/main.28af6006.js.map",
+    "main.32053766.js.map": "/Moje-szachy/static/js/main.32053766.js.map",
     "787.28cb0dcd.chunk.js.map": "/Moje-szachy/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bde42532.css",
-    "static/js/main.28af6006.js"
+    "static/js/main.32053766.js"
   ]
 }
